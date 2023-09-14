@@ -1,0 +1,108 @@
+body{
+    background: #06142E;
+    color: #f8e6e8;
+    margin: 0 1rem;
+}
+::-webkit-scrollbar{
+    width: 12px;
+    height: 5px;
+}
+::-webkit-scrollbar-track{
+    background: #06142E;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#BD83B8,#F1916D);
+    border-radius: 10px;
+}
+::selection{
+    background: #F1916D;
+    color: #06142E;
+}
+#head-title {
+    text-align: center;
+    color: #F1916D;
+}
+.img-by{
+    color: #F1916D;
+    font-style: bold;
+    cursor: pointer;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: #BD83B8;
+}
+.content{
+    margin: 0 1rem;
+    padding: 0 2rem;
+}
+p{
+    font-size: 1.1em;
+    text-align: justify;
+}
+.para-start{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: serif;
+}
+img{
+    display: inline-block; 
+    max-width: 50% !important;
+    position: relative;
+    left: 25vw;
+    border-radius: 2rem;
+}
+mark{
+    background: #F1916D;
+    color:  black;
+    border-radius: 1rem;
+    padding: 0.2em 0.5em;
+}
+h4{
+    color: #F1916D;
+}
+h3{
+    color: #7cf16d;
+}
+/*code */
+.code-tag{
+    color: blue;
+}
+pre{
+    background: #000;
+    width: 30vw;
+    height: auto;
+    padding-left: 1rem;
+}
+code{
+    color: black;
+}
+.code-css-keyword{
+    color: #8d54ff;
+}
+.code-css-selector{
+    color: rgb(246, 65, 161);
+}
+.code-css-symbol{
+    color: #BD83B8;
+}
+.code-css-property{
+    color: rgb(13, 174, 13);
+}
+.code-css-value{
+    color: white;
+}
+.code-css-select{
+    color: white;
+}
+@media screen and (max-width:800px){
+    img{
+        display: inline-block; 
+        max-width: 100% !important;
+        position: relative;
+        left: 0vw;
+    }
+    pre{
+        width: 60vw;
+    }
+}

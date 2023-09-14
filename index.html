@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nad-soft Blog</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="theme-color" content="#e83e8c">
+    <meta content="blog,hacking news,nad-soft,nad soft" name="keywords" />
+    <meta content="We talk about latest hacking news and technologies." name="description" />
+
+    <!-- Favicon -->
+    <link href="img/logo.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+      <div class="row align-items-center bg-dark px-lg-5">
+        <div class="col-lg-9">
+          <nav class="navbar navbar-expand-sm bg-dark p-0">
+            <ul class="navbar-nav ml-n2">
+              <li class="nav-item border-right border-secondary">
+                <a class="nav-link text-body small" href="#"
+                  id="nowDate">
+                </a>
+              </li>
+              <li class="nav-item border-right border-secondary">
+                <a class="nav-link text-body small" href="#">Advertise</a>
+              </li>
+              <li class="nav-item border-right border-secondary">
+                <a class="nav-link text-body small" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body small" href="#">Login</a>
+              </li>
+            </ul>
+            <span id="time" style="color:#fff;position:relative;left:20vw;"></span>
+          </nav>
+        </div>
+        <div class="col-lg-3 text-right d-none d-md-block">
+          <nav class="navbar navbar-expand-sm bg-dark p-0">
+            <ul class="navbar-nav ml-auto mr-n2">
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#"
+                  ><small class="fab fa-twitter"></small
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#"
+                  ><small class="fab fa-facebook-f"></small
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#"
+                  ><small class="fab fa-linkedin-in"></small
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#"
+                  ><small class="fab fa-instagram"></small
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#"
+                  ><small class="fab fa-google-plus-g"></small
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#"
+                  ><small class="fab fa-youtube"></small
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row align-items-center bg-white py-3 px-lg-5">
+        <div class="col-lg-4">
+          <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
+            <h1 class="m-0 display-4 text-uppercase text-primary">
+              NAD<span class="text-secondary font-weight-normal">Soft</span>
+            </h1>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+      <nav
+        class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5"
+      >
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+          <h1 class="m-0 display-4 text-uppercase text-primary">
+            Nad<span class="text-white font-weight-normal">Soft</span>
+          </h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between px-0 px-lg-3"
+          id="navbarCollapse"
+        >
+          <div class="navbar-nav mr-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="category.html" class="nav-item nav-link">Category</a>
+            <a href="single.html" class="nav-item nav-link">Single News</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                >Catagory</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="#" class="dropdown-item">Cyber Security</a>
+                <a href="#" class="dropdown-item">programming</a>
+                <a href="#" class="dropdown-item">Artifial Intelligence</a>
+              </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <div
+            class="input-group ml-auto d-none d-lg-flex"
+            style="width: 100%; max-width: 300px"
+          >
+            <input
+              type="text"
+              class="form-control border-0"
+              placeholder="Keyword"
+              id="searchInput"
+            />
+            <div class="input-group-append">
+              <button
+                class="input-group-text bg-primary text-dark border-0 px-3"
+                id="search-btn"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <ul id="blogList"></ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Main News Slider Start -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-7 px-0">
+          <div class="owl-carousel main-carousel position-relative">
+            <div
+              class="position-relative overflow-hidden"
+              style="height: 500px"
+            >
+              <img
+                class="img-fluid h-100"
+                src="/database/img/chatGPT.jpeg"
+                style="object-fit: cover"
+              />
+              <div class="overlay">
+                <div class="mb-2">
+                  <a
+                    class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                    href=""
+                    >Artifial Intelligence</a>
+                  >
+                  <a class="text-white" href="">Aug 31, 2023</a>
+                </div>
+                <a
+                  class="h2 m-0 text-white text-uppercase font-weight-bold"
+                  href="/database/blog_files/2023-08-31.html"
+                  >Improve Your Website with AI...</a
+                >
+              </div>
+            </div>
+            <div
+              class="position-relative overflow-hidden"
+              style="height: 500px"
+            >
+              <img
+                class="img-fluid h-100"
+                src="https://img.freepik.com/free-photo/cyber-attack-with-unrecognizable-hooded-hacker-using-virtual-reality-digital-glitch-effect_146671-18950.jpg?w=900&t=st=1694097839~exp=1694098439~hmac=056697af93c83ec25909a20ef39260da4492d4a44dda39429e8209dcc99932e5"
+                style="object-fit: cover" loading="lazy"
+              />
+              <div class="overlay">
+                <div class="mb-2">
+                  <a
+                    class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                    href=""
+                    >Cyber Security</a
+                  >
+                  <a class="text-white" href="">Sep 01, 2023</a>
+                </div>
+                <a
+                  class="h2 m-0 text-white text-uppercase font-weight-bold"
+                  href="./database/blog_files/2023-09-01.html"
+                  >Python Supply Chain Attack: A Growing Threat to Developers...</a
+                >
+              </div>
+            </div>
+            <div
+              class="position-relative overflow-hidden"
+              style="height: 500px"
+            >
+              <img
+                class="img-fluid h-100"
+                src="https://img.freepik.com/free-photo/standard-quality-control-collage-concept_23-2149595831.jpg?w=900&t=st=1693653311~exp=1693653911~hmac=e3d8a750cb1017de3ef739ae3d3d69ec83181812c898fe94cc7024d9ef268108"
+                style="object-fit: cover"
+                loading="lazy"
+              />
+              <div class="overlay">
+                <div class="mb-2">
+                  <a
+                    class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                    href=""
+                    >Cyber Security</a
+                  >
+                  <a class="text-white" href="">Aug 30, 2023</a>
+                </div>
+                <a
+                  class="h2 m-0 text-white text-uppercase font-weight-bold"
+                  href="./database/blog_files/2023-08-30.html"
+                  >Getting Started in Cybersecurity: Ethical Hacking Methods for Beginners...</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 px-0">
+          <div class="row mx-0">
+            <div class="col-md-6 px-0">
+              <div
+                class="position-relative overflow-hidden"
+                style="height: 250px"
+              >
+                <img
+                  class="img-fluid w-100 h-100"
+                  src="https://img.freepik.com/free-photo/online-web-design_53876-95309.jpg?w=900&t=st=1693658430~exp=1693659030~hmac=ecb0fd84dd2fb89884115ecf7fcc6691428be8c11ca3c6e993825394a24c7057"
+                  style="object-fit: cover"
+                  loading="lazy"
+                />
+                <div class="overlay">
+                  <div class="mb-2">
+                    <a
+                      class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                      href=""
+                      >Web Design</a
+                    >
+                    <a class="text-white" href=""
+                      ><small>Aug 27, 2023</small></a
+                    >
+                  </div>
+                  <a
+                    class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                    href="./database/blog_files/2023-08-27.html"
+                    >The Art of Debugging CSS: Common Issues and Solutions</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 px-0">
+              <div
+                class="position-relative overflow-hidden"
+                style="height: 250px"
+              >
+                <img
+                  class="img-fluid w-100 h-100"
+                  src="https://img.freepik.com/premium-photo/designers-create-user-interface-mobile-phones_8119-2674.jpg?w=900"
+                  style="object-fit: cover"
+                  loading="lazy"
+                />
+                <div class="overlay">
+                  <div class="mb-2">
+                    <a
+                      class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                      href=""
+                      >Web Design</a
+                    >
+                    <a class="text-white" href=""
+                      ><small>Aug 28, 2023</small></a
+                    >
+                  </div>
+                  <a
+                    class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                    href="./database/blog_files/2023-08-28.html"
+                    >Mastering CSS Grid: A Comprehensive Guide</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 px-0">
+              <div
+                class="position-relative overflow-hidden"
+                style="height: 250px"
+              >
+                <img
+                  class="img-fluid w-100 h-100"
+                  src="https://img.freepik.com/free-vector/cartoon-web-design-landing-page_52683-70880.jpg?w=1060&t=st=1693654818~exp=1693655418~hmac=40b28a1b9caa740ee6110e0125d35f88a6245814eac40da16856310ee7989001"
+                  style="object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="mb-2">
+                    <a
+                      class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                      href=""
+                      >Web Design</a
+                    >
+                    <a class="text-white" href=""
+                      ><small>Aug 29, 2023</small></a
+                    >
+                  </div>
+                  <a
+                    class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                    href="./database/blog_files/2023-08-29.html"
+                    >10 Tips to Improve Your CSS Code Quality</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 px-0">
+              <div
+                class="position-relative overflow-hidden"
+                style="height: 250px"
+              >
+                <img
+                  class="img-fluid w-100 h-100"
+                  src="https://img.freepik.com/free-photo/standard-quality-control-collage-concept_23-2149595831.jpg?w=900&t=st=1693653311~exp=1693653911~hmac=e3d8a750cb1017de3ef739ae3d3d69ec83181812c898fe94cc7024d9ef268108"
+                  loading="lazy"
+                  style="object-fit: cover"
+                />
+                <div class="overlay">
+                  <div class="mb-2">
+                    <a
+                      class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                      href=""
+                      >Cyber</a
+                    >
+                    <a class="text-white" href=""
+                      ><small>Aug 30, 2023</small></a
+                    >
+                  </div>
+                  <a
+                    class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                    href="./database/blog_files/2023-08-30.html"
+                    >Getting Started in Cybersecurity: Ethical Hacking Methods for Beginners</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main News Slider End -->
+
+    <!-- Breaking News Start -->
+    <div class="container-fluid bg-dark py-3 mb-3">
+      <div class="container">
+        <div class="row align-items-center bg-dark">
+          <div class="col-12">
+            <div class="d-flex justify-content-between">
+              <div
+                class="bg-primary text-dark text-center font-weight-medium py-2"
+                style="width: 170px"
+              >
+                Breaking News
+              </div>
+              <div
+                class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                style="width: calc(100% - 170px); padding-right: 90px" id="news"
+              >
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href=""
+                  >Cape Cod COVID-19 news: New variant symptoms, boosters, recovery time - Cape Cod Times</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews02"
+                  >Pope Francis arrives in Mongolia - Vatican News</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews03"
+                  >Trump's Georgia trial will be televised, judge says - CBS New</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews04"
+                  ></a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews05"
+                  ></a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews06"
+                  >China Cuts Down Payments in Property Stimulus Drive - Bloomberg Television</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews07"
+                  >Husband of 8 passengers creator Ruby Franke says he hopes to 'keep his children together': report - Insider</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews08"
+                  >Trump's Georgia trial will be televised, judge says - CBS New</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews09"
+                  >Pope Francis arrives in Mongolia - Vatican News</a
+                >
+              </div>
+              <div class="text-truncate">
+                <a
+                  class="text-white text-uppercase font-weight-semi-bold"
+                  href="" id="breakingNews10"
+                  >Miley Cyrus Says This Moment With Taylor Swift and Demi Lovato Shows She's Bisexual - E! NEWS</a
+                >
+              </div>
+                <div class="text-truncate">
+                  <a
+                    class="text-white text-uppercase font-weight-semi-bold"
+                    href=""
+                    >Subscribe our Newsletter to update with latest news...</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Breaking News End -->
+
+    <!-- Featured News Slider Start -->
+    <div class="container-fluid pt-5 mb-3">
+      <div class="container">
+        <div class="section-title">
+          <h4 class="m-0 text-uppercase font-weight-bold">Featured News</h4>
+        </div>
+        <div
+          class="owl-carousel news-carousel carousel-item-4 position-relative"
+        >
+          <div class="position-relative overflow-hidden" style="height: 300px">
+            <img
+              class="img-fluid h-100"
+              src="https://img.freepik.com/free-photo/rear-view-programmer-working-all-night-long_1098-18697.jpg?w=900&t=st=1693674709~exp=1693675309~hmac=74c1d2b0e80afb689ce916e9605bee32f9f468a4c23268fe5e3bff1e45242c2d"
+              style="object-fit: cover"
+            />
+            <div class="overlay">
+              <div class="mb-2">
+                <a
+                  class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                  href=""
+                  >Web Design</a
+                >
+                <a class="text-white" href=""><small>Sep 01, 2023</small></a>
+              </div>
+              <a
+                class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                href="./database/blog_files/2023-09-02.html"
+                >CSS-in-JS vs. Traditional CSS: Pros and Cons</a
+              >
+            </div>
+          </div>
+          <div class="position-relative overflow-hidden" style="height: 300px">
+            <img
+              class="img-fluid h-100"
+              src="https://img.freepik.com/premium-photo/web-development-programming-code-app-development-web-design-computer-seo-3d-background_125322-451.jpg?w=996"
+              style="object-fit: cover"
+            />
+            <div class="overlay">
+              <div class="mb-2">
+                <a
+                  class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                  href=""
+                  >Development</a
+                >
+                <a class="text-white" href=""><small>Sep 02, 2023</small></a>
+              </div>
+              <a
+                class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                href="./database/blog_files/2023-09-03.html"
+                >10 Essential CSS Libraries and Frameworks for Developers</a
+              >
+            </div>
+          </div>
+          <div class="position-relative overflow-hidden" style="height: 300px">
+            <img
+              class="img-fluid h-100"
+              src="https://img.freepik.com/premium-vector/isometric-developing-programming-coding-technologies-young-programmer-coding-new-project-using-computer-man-sitting-big-laptop-working_589019-2494.jpg?w=826"
+              style="object-fit: cover"
+            />
+            <div class="overlay">
+              <div class="mb-2">
+                <a
+                  class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                  href=""
+                  >Web Design</a
+                >
+                <a class="text-white" href=""><small>Sep 04, 2023</small></a>
+              </div>
+              <a
+                class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                href="./database/blog_files/2023-09-04.html"
+                >Responsive Web Design with CSS Media Queries</a
+              >
+            </div>
+          </div>
+          <div class="position-relative overflow-hidden" style="height: 300px">
+            <img
+              class="img-fluid h-100"
+              src="https://img.freepik.com/free-vector/microsite-development-abstract-concept-illustration_335657-3690.jpg?w=740&t=st=1693677076~exp=1693677676~hmac=ff52345b536e14e2105fa1a6a17c04a5470a9fadea1740faf615d2db9eadfada"
+              style="object-fit: cover"
+            />
+            <div class="overlay">
+              <div class="mb-2">
+                <a
+                  class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                  href=""
+                  >Web Design</a
+                >
+                <a class="text-white" href=""><small>Sep 05, 2023</small></a>
+              </div>
+              <a
+                class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                href="./database/blog_files/2023-09-05.html"
+                >Sass vs. Less: A Comparison of CSS Preprocessors</a
+              >
+            </div>
+          </div>
+          <div class="position-relative overflow-hidden" style="height: 300px">
+            <img
+              class="img-fluid h-100"
+              src="https://img.freepik.com/free-photo/cyber-attack-with-unrecognizable-hooded-hacker-using-virtual-reality-digital-glitch-effect_146671-18950.jpg?w=900&t=st=1694097839~exp=1694098439~hmac=056697af93c83ec25909a20ef39260da4492d4a44dda39429e8209dcc99932e5"
+              style="object-fit: cover"
+            />
+            <div class="overlay">
+              <div class="mb-2">
+                <a
+                  class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                  href=""
+                  >Cyber</a
+                >
+                <a class="text-white" href=""><small>Sep 01, 2023</small></a>
+              </div>
+              <a
+                class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
+                href="./database/blog_files/2023-09-01.html"
+                >Python Supply Chain Attack: A Growing Threat to Developers</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featured News Slider End -->
+
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-title">
+                  <h4 class="m-0 text-uppercase font-weight-bold">
+                    Latest News
+                  </h4>
+                  <a
+                    class="text-secondary font-weight-medium text-decoration-none"
+                    href=""
+                    >View All</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                  <img
+                    class="img-fluid w-100"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJL0Oib8xPE6uLZB33ieskPXNziKPTa-1bJQ&usqp=CAU5"
+                    style="object-fit: cover"
+                    loading="lazy"
+                  />
+                  <div class="bg-white border border-top-0 p-4">
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                        href=""
+                        >Cyber Security</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 01, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
+                      href="./database/blog_files/2023-09-01.html"
+                      >Python Supply Chain Attack: A Growing Threat to Developers...</a
+                    >
+                    <p class="m-0">
+                      In recent years, the cybersecurity landscape has witnessed a surge in supply chain attacks targeting software developers. <br>.<br>
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between bg-white border border-top-0 p-4"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="rounded-circle mr-2"
+                        src="img/user.jpg"
+                        width="25"
+                        height="25"
+                        alt=""
+                      />
+                      <small>Nuwan de Silva</small>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <small class="ml-3"
+                        ><i class="far fa-eye mr-2"></i>500</small
+                      >
+                      <small class="ml-3"
+                        ><i class="far fa-comment mr-2"></i>123</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                  <img
+                    class="img-fluid w-100"
+                    src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010144.jpg?w=900&t=st=1693761852~exp=1693762452~hmac=007faeb3ceed4def4ceb7806e2d32b183be49dcee1c8e3c1d0998b6f803c2e37"
+                    style="object-fit: cover"
+                  />
+                  <div class="bg-white border border-top-0 p-4">
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 06, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
+                      href="./database/blog_files/2023-09-06.html"
+                      >CSS Custom Properties (Variables): A Guide to Maintainable Styling</a
+                    >
+                    <p class="m-0">
+                      CSS Custom Properties, also known as CSS variables, have become a game-changer in the world of web development.
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between bg-white border border-top-0 p-4"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="rounded-circle mr-2"
+                        src="img/user.jpg"
+                        width="25"
+                        height="25"
+                        alt=""
+                      />
+                      <small>DoAIx</small>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <small class="ml-3"
+                        ><i class="far fa-eye mr-2"></i>120</small
+                      >
+                      <small class="ml-3"
+                        ><i class="far fa-comment mr-2"></i>50</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 mb-3">
+                <div class="custom-slider-container">
+                    <div class="custom-slider">
+                        <img src="img/ads/postArticle.png" alt="">
+                        <img src="img/ads/burger.png" alt="">
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                  <img
+                    class="img-fluid w-100"
+                    src="https://st3.depositphotos.com/1607243/16635/i/450/depositphotos_166355024-stock-photo-desk-with-computer-and-pen.jpg"
+                    style="object-fit: cover"
+                  />
+                  <div class="bg-white border border-top-0 p-4">
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 04, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold"
+                      href=""
+                      >Responsive Web Design with CSS Media Queries...</a
+                    >
+                  </div>
+                  <div
+                    class="d-flex justify-content-between bg-white border border-top-0 p-4"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="rounded-circle mr-2"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFiRSnjp6HIJtqYmjTgxvi0IQCiszbK4g2rw&usqp=CAU"
+                        width="25"
+                        height="25"
+                        alt=""
+                      />
+                      <small>Deleted!</small>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <small class="ml-3"
+                        ><i class="far fa-eye mr-2"></i>12345</small
+                      >
+                      <small class="ml-3"
+                        ><i class="far fa-comment mr-2"></i>123</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="position-relative mb-3">
+                  <img
+                    class="img-fluid w-100"
+                    src="data:image/jpeg;base64,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"
+                    style="object-fit: cover"
+                  />
+                  <div class="bg-white border border-top-0 p-4">
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 29, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold"
+                      href=""
+                      >10 Tips to Improve Your CSS Code Quality...</a
+                    >
+                  </div>
+                  <div
+                    class="d-flex justify-content-between bg-white border border-top-0 p-4"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        class="rounded-circle mr-2"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTPFG2avZ9h7ROn4W6qZy5risfoI-ykQlsew&usqp=CAU"
+                        width="25"
+                        height="25"
+                        alt=""
+                      />
+                      <small>Kelli Zandra</small>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <small class="ml-3"
+                        ><i class="far fa-eye mr-2"></i>12345</small
+                      >
+                      <small class="ml-3"
+                        ><i class="far fa-comment mr-2"></i>123</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <!--image size: 1-->
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="https://www.fintechfutures.com/files/2021/04/Digital-110x110.jpeg" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Cyber</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 07, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.hackread.com/protonmail-code-vulnerabilities-leak-emails/"
+                      >ProtonMail Code Vulnerabilities Leaked Emails...</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/jpeg;base64,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" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Cyber</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 05, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.hackread.com/cryptocurrency-casino-stake-hacked-41-million/"
+                      >World’s Largest Cryptocurrency Casino Stake Hacked for $41 Million...</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaVGvftlhidPu0EU5RPB74gWB5UEL67O7prA&usqp=CAU" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Gaming</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Aug 31, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.hackread.com/the-best-fps-games-on-android-in-2023/"
+                      >The Best FPS Games on Android In 2023: Popular by Demand...</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/jpeg;base64,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" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >AI</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 03, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href=""
+                      >China’s Baidu Introduces ChatGPT Rival Ernie Bot...</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 mb-3">
+                <a href="https://www.burger.com" target="_blank"
+                  ><img 
+                  class="img-fluid w-100" 
+                  src="img/ads/burger1.gif" 
+                  alt=""
+                  style="border-radius: 10px;"
+                /></a>
+              </div>
+              <div class="col-lg-12">
+                <div class="row news-lg mx-0 mb-3">
+                  <div class="col-md-6 h-100 px-0">
+                    <img
+                      class="img-fluid h-100"
+                      src="https://www.hackread.com/wp-content/uploads/2023/09/agent-tesla-malware-excel-exploit-windows-devices-2-800x467.jpg"
+                      style="object-fit: cover; border-radius:15px;"
+                    />
+                  </div>
+                  <div
+                    class="col-md-6 d-flex flex-column border bg-white h-100 px-0"
+                  >
+                    <div class="mt-auto p-4">
+                      <div class="mb-2">
+                        <a
+                          class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                          href=""
+                          >Cyber Attack</a
+                        >
+                        <a class="text-body" href=""
+                          ><small>Sep 06, 2023</small></a
+                        >
+                      </div>
+                      <a
+                        class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
+                        href="https://www.hackread.com/agent-tesla-variant-excel-exploit-windows-pc/"
+                        >New Agent Tesla Variant Uses Excel Exploit to Infect Windows PCs...</a
+                      >
+                      <p class="m-0">
+                        FortiGuard Discovers Phishing Campaign Distributing New Agent Tesla Variant to Windows Devices.
+                      </p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between bg-white border-top mt-auto p-4"
+                    >
+                      <div class="d-flex align-items-center">
+                        <img
+                          class="rounded-circle mr-2"
+                          src="https://secure.gravatar.com/avatar/98fafd721614928c5b20cd78eadc2ff5?s=100&d=mm&r=g"
+                          width="25"
+                          height="25"
+                          alt=""
+                        />
+                        <small>DEEBA AHMED</small>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <small class="ml-3"
+                          ><i class="far fa-eye mr-2"></i>12345</small
+                        >
+                        <small class="ml-3"
+                          ><i class="far fa-comment mr-2"></i>123</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/jpeg;base64,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" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 27, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="./database/blog_files/2023-08-27.html"
+                      >The Art of Debugging CSS: Common Issues and Solutions</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="https://www.dotcominfoway.com/wp-content/uploads/2021/01/CMS.png" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 28, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="./database/blog_files/2023-08-28.html"
+                      >Mastering CSS Grid: A Comprehensive Guide</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7R8NxRd6jZo02-6Q68QcBtNDMtrJLnXT30A&usqp=CAU" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 29, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="./database/blog_files/2023-08-29.html"
+                      >10 Tips to Improve Your CSS Code Quality</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/png;base64,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" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Web Design</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Aug 02, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="./database/blog_files/2023-09-02.html"
+                      >CSS-in-JS vs. Traditional CSS: Pros and Cons</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Social Follow Start -->
+            <div class="mb-3">
+              <div class="section-title mb-0">
+                <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
+              </div>
+              <div class="bg-white border border-top-0 p-3">
+                <br>
+                <a
+                  href=""
+                  class="d-block w-100 text-white text-decoration-none mb-3"
+                  style="background: #52aaf4"
+                >
+                  <i
+                    class="fab fa-twitter text-center py-4 mr-3"
+                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"
+                  ></i>
+                  <span class="font-weight-medium">@slnadyc</span>
+                </a>
+                <a
+                  href=""
+                  class="d-block w-100 text-white text-decoration-none mb-3"
+                  style="background: #0185ae"
+                >
+                  <i
+                    class="fab fa-linkedin-in text-center py-4 mr-3"
+                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"
+                  ></i>
+                  <span class="font-weight-medium">Sl Nad Yc</span>
+                </a>
+                <a
+                  href=""
+                  class="d-block w-100 text-white text-decoration-none mb-3"
+                  style="background: #dc472e"
+                >
+                  <i
+                    class="fab fa-youtube text-center py-4 mr-3"
+                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"
+                  ></i>
+                  <span class="font-weight-medium">@slnadyc</span>
+                </a>
+              </div>
+            </div>
+            <!-- Social Follow End -->
+
+            <!-- Ads Start -->
+            <div class="mb-3">
+              <div class="section-title mb-0">
+                  <h4 class="m-0 text-uppercase font-weight-bold">
+                      Advertisement
+                  </h4>
+              </div>
+              <div class="slider-container">
+                  <div class="slider">
+                      <img class="img-fluid" src="img/ads/Place (1).png" alt="Image 1">
+                      <img class="img-fluid" src="https://streetmediagroup.com/wp-content/uploads/2019/02/Slider-StateFarm-2-800x500.jpg" alt="Image 2">
+                      <img class="img-fluid" src="https://abovealladvertising.net/wp/wp-content/uploads/2022/02/Benefits-of-Banner-Advertising-That-Make-It-Crucial-For-Every-Business.jpg" alt="Image 3">
+                      <!-- Add more images here -->
+                  </div>
+              </div>
+          </div>
+            <!-- Ads End -->
+
+            <!-- Popular News Start -->
+            <div class="mb-3">
+              <div class="section-title mb-0">
+                <h4 class="m-0 text-uppercase font-weight-bold">
+                  Tranding News
+                </h4>
+              </div>
+              <div class="bg-white border border-top-0 p-3">
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/jpeg;base64,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" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Tech</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 7, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.theverge.com/23861994/polaroid-i-2-instant-camera-test-hands-on-full-frame-becca-farsace"
+                      >Can a $599 camera bring Polaroid back?</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABuCAMAAADxhdbJAAAAilBMVEUAAADiIxrfIxoEAQDxJRzkIxruJRvnJBvqJBv0JhzbIhkaBAPTIRiuGxTMIBdhDwtxEg1rEQy1HBVJCwgSAwIpBgUMAgGUFxF8Ew4+CgcjBQQ1CAYeBANYDgpdDguiGRMvBwVRDQm9HRZCCwijGROBFA/DHheMFhB/FA+JFRAqBwX8Jx1HCwkyCAWmDjWLAAAEFUlEQVRoge2Z2ZqiSBCFk9xBQFTEXdR2rKWr3//1JoWqchkND5jWRY9x4VV+/GRsxAkZe9rTnva0v9iE+IuR5Xg5/zlkh4cySsaDvEY+FibYQEZcaanj5J9J59FIwd4kDwLOa2S/N3wsskhtUNseaaWJyu7qcY7NIxUcjPNA6VBFSXdWPAAp2Frz4NQqpDTpaD2sz/hDClbKc9wn0kjNN9uF3xopdvYSrkYqq3WweVnPhS/k0FyBfWVPYKXkm5fBlN2PFKx70ZdnSJewMkheF/mdSMFGN3HfyFDGSfYrr4ntkHlMOvMMaWxoHfKjZY0INvtPGdy8pWs+6Wg5adEJBFs2w33dUmodj3rDhgmLhu4yUppduc6LBtcrUjh0F5CBK8sofRt0sPsJ9qu5L88uqdwt43SK4RbtfHnGVPodwonyvtt9mtlhATz9+LQ1LsdIQQg2sbcfBuDCJYbLQh++DBQUOsYSH6Hjuo8VQoOGSeHkG+ZLH2Wwxw0w3NhL6FTUgXzJtl5CZzdY6ApPocswXw68tBSuZxjuxUumKA71ZyY2V0e+Bsb1FqI5oeWlYYZg6NaUL43Zfz4RszPIlbXQukZLYxtqw28jVTCHfFkQoXPJnU96yR6paCTXCVZ1neB66PbJ7SyfZVvu5jwKF/bA0BFVt0/uz3luOslKqhvYCTZrEh3skNzVk6icMjE4+FGhO05uN9Bcx7kXw6baKVV19s/RyYN4v/Fi122/3qBCd5zcK7IbDJG7kdP6SXI7BUh8FU2K0JwR0/pZchOz6P7FoNB1qAnzJLmpk1wusNCRHorF0UNI8W7A0FHJbfuHPRX5YtzuwLmBFFrmezUmbuUURGMrekox1WpsuSpoGcFl9/7QVQ+qV2NpuVhTMsJgcwOV3MdIJxX59e7jQoc1TLIMTpHEQS5H2Nfg3ceA6doBWHU9P9M61jBZ2/XGqcFV50sjQ6FzGtnPtC5BjTz2M61HOeJKIfxoZNtHaN5CF75ivrxzM/WFQxumr9BBGll4W28gNMbmnkIHbqY8rTc0uN7IdOQBpzhUdW5a/60UKBWpy4FCi03KmDupiKrTKzisDCrL58tRbOUtqUjjPlBcdSz/U0lF2RKpYjB0NbFCzp1UjGWbW3JZNv2TpD6eD7oJ16FthuQS0sgXL8k6g3E/aoQEN1PXkfOP134kpQ0gpIqw9QZ9y+UoUaG+jeS6vIN2jBwuRjslKySBw9YbGFJMu8nOSKoTnIh3D0i2WiZpEGp1EWnSJlV3G1n9FqtsG9vQBudIeKnYGLlfjQXmbDXWpGE2R05nmesE8lCWioO79RbE79XY5qssObyZasusfjvrt74KpeUaFFr3EGvAe/d1E/1ePxx3hJxmoEb2h/xJ+3ni0572tP+1/QswqztKQHpCrAAAAABJRU5ErkJggg==" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Gaming</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>Sep 05, 2023</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.bbc.com/news/technology-66755095"
+                      >Roblox coming to PlayStation 4 and PS5</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="img/news-110x110-3.jpg" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Business</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>2 Days Ago</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.bbc.com/news/business-66747694"
+                      >Another FTX executive Ryan Salame pleads guilty</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhUQExAVEhUXFhUVFRgYFhkeGBgfFhUdGBYWGBYdHigiGBolJxgVITEiJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGyslHSYrLS8tLS83LSstLS0rNy0tKy0tMTEtLS0tLS0tLSstKy0tLS0rLS0tLS0tLS0tLS0rLf/AABEIAG4AbgMBEQACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwEEBQYIAwL/xABBEAABAwIDAwcGCwkBAAAAAAABAAIDBBEFBhIHITETIkFRYXGyMjM0coGxFDVCUmJzdJGSs9EVFyNTgpPBw+EI/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAQFAQMGAgf/xAAyEQEAAgIBAgMFBwMFAAAAAAAAAQIDBBEFMRIyUSEiNEFxBhMUNUKBsTNhwRUjJHKR/9oADAMBAAIRAxEAPwCDUBAQEBAQEBAQEBAQEBAQEBAQEBBd0FI6WRkTPKe5rRv3XcbBZiJmeIeMuSMdZtPaG0/u0xDqi/uKR+Fuo5+0mlE8e9/41zGsKlpZTDJYOba9ju5wuFovSazxK41dmmzjjJTtLHry3qICAgICAgICAgIMvlT0yn+uj8YWzH54Rd7+hf6S60y20GBtx0u8S2bEz41d0OtZ1I5j1Rlt0y890fwpguLAP7C1R5djr5K5NS2H5x2QEsKlRZBAQEBAQEBAQEGXyn6ZT/XR+MLZj88Iu78Pf6S62yz5hve73r3s+dX9C+Ej91/U07JGlj2hzSCCDwN1pXdbTWeYlCubtid3mWik0tO/k3DyfVK9VrW3eUPYz5sc8xTxR/buh/GsIlpZXwyDnMcWk2IG7quAvMxxKRita9IvNZjn1Y5YbFEYEBAQEBBkcLwioqXaYYnSHpsNw7ydwXqtJt5WjY2sOvHOW0Q2WHZnXkXPJN7C8/4BUiNTJwqJ+0en4uI5n6Qw2XoHR18DHDe2djT7HgLTjji8LLbt4ta0x6OsMs+Yb3u962bHnQehfCR+7AYpn6Clqn01QOTaCwNkG8c5gdZwUfl10dLm2rXPW0cz8pbFQ41TTC8U8b+5wv8AcsoeTUz4596k8ernfbD6TN9a7wrz+pd7/wCX4UcLLnFEBAQEFUGyZLy26tm0m7Ym86R3uA7St2HFN5VnVOoV08XijzS6IytlaOONoDBHEPJaOLvpOKlZc9cceCig0el5N6fxG1aeJ+TbYqSNg5rQ1QZyWt3dVr6mHBxGOsQ5txr4xpvtTvzGpi88L/7VfC1/6y6Fyz5hve7xLbs+dx3QvhI/dBu3D0qf1ovygo9u7vbflNfrP8ozpcTmj3NkIHVxH3FZ4VGvv7GD+neYfeIYtJMA12ncegLDbtdT2NqsVyzzx9GOWVcogICAgqgn7Y/gzfg0W7zhdK/uBsAp1J+7w8uQ2aTu9SjHby1SBnXHvgVPraAXuIYzq7z3KDMvoHSdCNnLFJ8sOfcxZxmMhvI6WTpcXGzewWXnhfbfVsOnP3OtSPZ85YrCcVfPWUusDdMzhffqe1bMUe/Dlet9QybeC3jiPZE9nUuWvMN73e9btnzqDoPwlf3Qbtw9Jn9aL8oKLbu7235TX6z/ACiVenOKICAgICAgqEHS2xqZr6WEjoiLfwusVKvP+1DnNSnh6jl5ZHavQPkpmyNF+Tdd3cRa6iy77oexGO9q+sOW5b6jfjc361hTX80tiyFh75q2LSDZjhI49QabrdgrM3jhV9W2K4dW0z83U+XG/wABve73letiffaOhR/xKz6oH2zzh9RUEfzGN/DGGlR57u+zV8HSqRKK1lzSiAgICAgIKhBKuxPNjaef4LK6zXnmE8ATxC3VtzXwyq9rD93nrsV7fq/w6Je0OFiLg8fatMrStvnCN8wbIKCeQzMaWFxu5ocQ0/otlJx/rhX7kbs+3BaPpLJZdyHHTDQxrY2dNiS53e4qT+IpWvFIUn+j7m1li+3eOPSGbzJjMdDTl+69tMbfnHoHcoc25nmXbdK6d99eMVI92HMuc8QL3BhOpxcZHntK8wuuv5681wU+TVllzSiAgICAgICCoNkEv5C2wyU7RT1jTMwbmyfLHY7rTlsw4sVvdmfD/CUaXaThj26hK4f0E+G6cws6dE2ckc4vDaP7TCwxXadA0HkY3SHrdzWhY8Xom4fs3k82xaKwiDNmdnzPL3ScrJvtbyGdgWO/dLzdS1dHF9zqcTPq0GaVznFxNyd59qy5O97ZLTa0+15rLwogICAgICAglfI+z/CMQiFq+YTtjEk7Gs3M67FzN6DC1uXsHIqTT180giha6MmEkSSc8lpIaNDRZnHtQXGbNn76aalhojNPJPDyxG4EIzWZjtLzyrlilmnfRYjVzU9SJWRRxt5+ou6CQHAFY4Zte0+aVxnbItDTPFJR1E9TW62tMJZwDmatVw0di9cNdrRHtlicV2ZYvTxmaSkOgC50vY4geq0rD3SPF2esuTI/2PBiTXyOmln5ER2Gk897Rp6STpRhruPZeqqJzWVMRic4ag0lt7dZAJQYlAQEBAQEEs/+ffPV32U+JA2R/FWOfZv9EyCUK7FqdrqbD3ONPPVUYZFUNAu0gDSwFBBeX8HmpMbpqacWkZVw3Pzryghw6wUOEnUmIQQ5oquVIaXxxNjceFzCz/q9V7I+XzVtPaHrlbA8SoauqrMQqw6lLJC7VJdslzdpDD5K8peKJmY8L0yvmKlo8IpqqWMuiNZKGmwvHrnltL7AjOaYm3MIs2tYFNT1rpXyOnjnvLDKTfU0/Iv9H9Ea2jICAgICAguKeqkjvokcy4sdLiL9hsgQ1UjA5rHuaHbnAOIDuwgcUH1LWyuLS6R7i22klxJFuq/BAmr5nvEjpXueLWcXOLhbhZxN0HnNO97tbnOc7pJJJ9pKD2nxGZ7Qx80j2jgHPcR7AUI9nZ8GqkLBHyjtAN9Oo6R26eCCs9bK9rWOke5rfJaXOLW+qDwQWqAgICAgICAgICAgICAgICAg/9k=" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Tech</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>1 Day Ago</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href="https://www.bbc.com/news/technology-66717589"
+                      >TikTok opens Dublin data centre to ease China spying fears</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center bg-white mb-3"
+                  style="height: 110px"
+                >
+                  <img class="img-fluid" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxEHBg8IBxERFA8PFRYTFxITCw8OEA4PIBMWIiAdFxMkKDQgJBsxGx8fLTEhMSk3LjouFys/ODMtNygtLisBCgoKDg0OGhAQGCseICUrLS0tNS0yLS0rLS0tLSsrLSs1LS0rKzctLi0rLS0tLS0rLS0tLS0tLS0vLS0tLSstLf/AABEIAG4AbgMBEQACEQEDEQH/xAAbAAEAAgIDAAAAAAAAAAAAAAAAAwYBBQIEB//EACwQAAIBAwMCBAUFAAAAAAAAAAABAgMEEQUhMRJRBkFhsRRxgZGhIiMyUtH/xAAbAQEAAgMBAQAAAAAAAAAAAAAAAgUBAwQGB//EACARAQACAgMBAQEBAQAAAAAAAAABAgMRBBIhMTJBE1H/2gAMAwEAAhEDEQA/AK+edmH0rWgfT9Mrd4Q3aPGO2vHJUpShKaTxHGXjZZeFkjXrv6jvH/1wJJgAAAAAAAAABNd0HbXMqMuYya+z5IYrd4a8N+8bQko8lOv1mCzJJvHr29djMxb4jb7pbr3Vbav4fcFFzl1QjJ7U5uSi8SeM548yqx4M3++9+KenHyf7qi93t75LVdQwADIAAAAAAABb/Fmg1bjVPiLKm5KaWcY2ktu/ZIqOBza0prJKm4PMpjpq8tBcaLcW0HOvScYrluUUl+Sxpycd/wAz9d9OVS/4lrzc6TywBYvDehx1SjUVxKK4cWpxlUi098x/q0/P0OHl8q2K0REK3mcm+K/WrUarbK0v50IpqMXhdTy5Lv8AXnY6sN5tXcuzBbtTtLqGxvAAAAAAAAPXNSu/gLGdzvLoWcLlnjsGOcuTrP8AXkcWKMuTrLzTV9aq6rU6q7xBcRT2j/r9T1HH4tMUfHo8HEri+Q1x0usAntrqVr1ui8dcXB9+l4z7EZpW/wBa74qX9shlJy/k2/m84RiIiPjNK68hgmmAAAAAAAAXfSfE8L+3dlqeFKSceriM8rG/Z/gpMvAnHeL0+KPPwZxX70+KbdUXb3E6M+Yya+eHjJcY53Ta3x33SJRE+u20HsMbmW/8OaGtTjOcpxwoyXTl9UZtYTaxxnfK7HFzOXbDaIhX8zl2x21DU39qrO5lQU1Jx2binhSXK3W51Y7d6dnXgyTeu5dYm3AAAAAAAAAxEb8Y1vxltyeZb/UlGp8r9Y8/NRLLwvcfmD5Dt1dNq0beVatFxjFpfqi023xjvsuTVTkVm2mjHya9tONtf1LSlKnbScepptxeJPGcLPbcXxVyTuyWTBXJPaUNeq7is6tTmW72xl+bJRTr5CdaRrUIyTYAAAAAAAAAAGY46v1cfnBj+6R/ulmuPEyraN8JThFODjFKX7nVDpe+65TS+5wY+DrN3VdODMZ+0qy3l5LBasBkAAAAAAAAAAAAxPvpPvoZ3LExsDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/9k=" alt="" />
+                  <div
+                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0"
+                  >
+                    <div class="mb-2">
+                      <a
+                        class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                        href=""
+                        >Business</a
+                      >
+                      <a class="text-body" href=""
+                        ><small>22h Ago</small></a
+                      >
+                    </div>
+                    <a
+                      class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                      href=""
+                      >Apple shares slide after China government iPhone ban reports</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Popular News End -->
+
+            <!-- Newsletter Start -->
+            <div class="mb-3">
+              <div class="section-title mb-0">
+                <h4 class="m-0 text-uppercase font-weight-bold">Newsletter</h4>
+              </div>
+              <div class="bg-white text-center border border-top-0 p-3">
+                <p>
+                  Aliqu justo et labore at eirmod justo sea erat diam dolor diam
+                  vero kasd
+                </p>
+                <div class="input-group mb-2" style="width: 100%">
+                  <input
+                    type="text"
+                    class="form-control form-control-lg"
+                    placeholder="Your Email"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-primary font-weight-bold px-3">
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+                <small>Lorem ipsum dolor sit amet elit</small>
+              </div>
+            </div>
+            <!-- Newsletter End -->
+
+            <!-- Tags Start -->
+            <div class="mb-3">
+              <div class="section-title mb-0">
+                <h4 class="m-0 text-uppercase font-weight-bold">Tags</h4>
+              </div>
+              <div class="bg-white border border-top-0 p-3">
+                <div class="d-flex flex-wrap m-n1">
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Cyber Security</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Business</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >technologies</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Gaming</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Artifial Intelligence</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Malware</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Web Design</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Programming</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Web Development</a
+                  >
+                  <a href="" class="btn btn-sm btn-outline-secondary m-1"
+                    >Hacking</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Tags End -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- News With Sidebar End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+      <div class="row py-4">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+            Get In Touch
+          </h5>
+          <p class="font-weight-medium">
+            <i class="fa fa-map-marker-alt mr-2"></i><a href="https://www.google.com/maps/place/Nad+Tech/">Nad Soft</a>
+          </p>
+          <p class="font-weight-medium">
+            <i class="fa fa-phone-alt mr-2"></i><a href="callto:+94123456789">+94123456789</a>
+          </p>
+          <p class="font-weight-medium">
+            <i class="fa fa-envelope mr-2"></i><a href="mailto:nadsoft.lifting476@passfwd.com">nadsoft@info.com</a>
+          </p>
+          <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">
+            Follow Us
+          </h6>
+          <div class="d-flex justify-content-start">
+            <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-lg btn-secondary btn-lg-square" href="#"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+            Popular News
+          </h5>
+          <div class="mb-3">
+            <div class="mb-2">
+              <a
+                class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                href=""
+                >Business</a
+              >
+              <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+            </div>
+            <a class="small text-body text-uppercase font-weight-medium" href=""
+              >THE BEST FPS GAMES ON ANDROID IN 2023: POPULAR BY DEMAND...</a
+            >
+          </div>
+          <div class="mb-3">
+            <div class="mb-2">
+              <a
+                class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                href=""
+                >Business</a
+              >
+              <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+            </div>
+            <a class="small text-body text-uppercase font-weight-medium" href=""
+              >PROTONMAIL CODE VULNERABILITIES LEAKED EMAILS...</a
+            >
+          </div>
+          <div class="">
+            <div class="mb-2">
+              <a
+                class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                href=""
+                >Business</a
+              >
+              <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+            </div>
+            <a class="small text-body text-uppercase font-weight-medium" href=""
+              >TIKTOK OPENS DUBLIN DATA CENTRE TO EASE CHINA SPYING FEARS</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+            Categories
+          </h5>
+          <div class="m-n1">
+            <a href="" class="btn btn-sm btn-secondary m-1">Cyber</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Hacking</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Tech</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Gaming</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">AI</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">API</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Python</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Programming</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Mobile Phone</a>
+            <a href="" class="btn btn-sm btn-secondary m-1">Malware</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h5 class="mb-4 text-white text-uppercase font-weight-bold" style="text-align:center;">
+            &lt;🔥🔥/&gt;
+          </h5>
+          <div class="row">
+            <div class="col-4 mb-3">
+              <a href=""
+                ><img class="w-100" src="https://avatar.cdnpk.net/23.jpg" alt=""
+              /></a>
+            </div>
+            <div class="col-4 mb-3">
+              <a href=""
+                ><img class="w-100" src="https://qph.cf2.quoracdn.net/main-qimg-199b6a3ad419b1b7faffa5b8ad122097-lq" alt=""
+              /></a>
+            </div>
+            <div class="col-4 mb-3">
+              <a href=""
+                ><img class="w-100" src="https://www.web-hosting.net.my/skins/serverfreak/img/iconf/git.png" alt=""
+              /></a>
+            </div>
+            <div class="col-4 mb-3">
+              <a href=""
+                ><img class="w-100" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABuCAMAAADxhdbJAAAAkFBMVEW4AAD////KU1PrxMT79vW5AAD//v/gmZm1EhLUiorNZGTv1dW5CQn49vbx0NHGR0XKYGDltLO7ExPVfHzAKir57Ou0AALz3NzhmZnpvr+9ICDYion05ubbkZHDNDXimZngoaDjrK3tx8fSennTdHPZhoLTbGngpKPANTbEQUC+JCTHTU7OW1vjsK/16Oi3KSniHtBaAAADkUlEQVRoge2X25aiOhBAKxiCLZE7oQW1vbUjYjv//3dTFVoass6ZNUKveZnsB1cskG2SSiUAWCwWi8VisVgsFovFYvlDto5BCaAyM5jhnaUZ3I7QvXGDCIOVGawwGJnBzdMyF16ZwQLDL2bwBYMLM+i5z/fOm6B73tbq4qqqNgcx1MXVy8smXpq6tZemu/UUnYhAKVDH5UCHDYxGfKATrxLDEIlJuqRgRZn4Yqg7sPtVHQa6D5Uc1/nKm6zjWVkMdWQKhzruqNPkuRORPL07ciOMwTy/R5Au+7qinB++QQcyURCuDZ2UCrZFTyf8pPS/QYeDKRZQDXU0jj/g1O/d+iL3OmMm61gFZ1MnWKCiQaqcoaZUzaelilycFomKjcGMTosrbAY6P4PyFtUOn7LMjxkS7ofLPKVgvRuuO1acsvK69SbpeI60ReVL1w/2i1heFHxkqvz1Ev02Qfe8DU4zgwaDZzN4xmBjBk8jdCbqz6+pEYNp8g2PsPwl5Hwu29Z8Plf68xMJCX7qS58TqubtzbK+3cLyd0n1P7hu6vtxqdt7378A+B0OVL4/I18ZRTd8uNvg9y3I8yHnS17E9YjevXbrNcC9G2DZW+83rGR4oHXPQnDS4gYVSOnRLVN2hPzW0wl2iDUhZFgbqQu7z2KzZ2yvN6BVeqw+8tEl2k/6ugbH2KXpol3wiFOFV3CfBVjTfpfi/9GznYTjdJy21i+daLqLH4y9AdQ5bTyYKTgONe5/YjYiS750eEjl217vnISgHuDkBQlETPxgTIJDU6cPE/uLHK9LI/2crndtpuzwYsZFnuHUFegN3UoP6TXXm+GHM8pIOrmj4Tw8etcmHukkHrtCeWDenG5YMRbhlF5n7f9Zj3nhIh1cOWZ8N5h7j6AXL8rJtL6zCArmqzu7X1xa89tUnwaLEVOodXDEdPO7zNSJqStJiL1cMK7gnbGf/Ry54u/EiNRsdbI9rD4WQkeZM3+Gpz+F3liI3gtk4tOqGKmDS/6luyVdaqoV45xVLsglzaeDoeZG1VI197YEPMlrq2tP0K0uWGk2NHJHClPRWVGDKlkqfO899dbj5u7tU0eDg8ne1kydnSt6GtWxPHPbg1FAke4NKG9+/+T/JA2ChW40QeDXLgQdO3q4jINgQ8OaBfpGF5MkyDnPi/2YGoZvOVI9Wkn7/cHjetd4/KR2nLAcI7NYLBaLxWKxWCwWi+Wf5RcCET6K0TMIGwAAAABJRU5ErkJggg==" alt=""
+              /></a>
+            </div>
+            <div class="col-4 mb-3">
+              <a href=""
+                ><img class="w-100" src="data:image/jpeg;base64,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" alt=""
+              /></a>
+            </div>
+            <div class="col-4 mb-3">
+              <a href=""
+                ><img class="w-100" src="data:image/jpeg;base64,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" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid py-4 px-sm-3 px-md-5"
+      style="background: #111111"
+    >
+      <p class="m-0 text-center">
+        &copy; <a href="#">nad-soft</a>. All Rights Reserved.
+
+        Design by <a href="https://htmlcodex.com">@slnadyc</a>
+      </p>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-square back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/slideAd.js"></script>
+    <script src="js/smallad.js"></script>
+    <!--script src="js/search.js"></!--script-->
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

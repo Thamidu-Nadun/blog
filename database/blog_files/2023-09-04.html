@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Responsive Web Design with CSS Media Queries</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="theme-color" content="#e83e8c">
+        <meta content="blog,hacking news,nad-soft,nad soft" name="keywords" />
+        <meta content="We talk about latest hacking news and technologies." name="description" />
+    
+        <!-- Favicon -->
+        <link href="/img/logo.png" rel="icon" />
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+    
+        <!-- Font Awesome -->
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+          rel="stylesheet"
+        />
+    
+        <!-- Libraries Stylesheet -->
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="/css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/database/css/blog.css">
+      </head>
+    
+      <body>
+        <!-- Topbar Start -->
+        <div class="container-fluid d-none d-lg-block">
+          <div class="row align-items-center bg-dark px-lg-5">
+            <div class="col-lg-9">
+              <nav class="navbar navbar-expand-sm bg-dark p-0">
+                <ul class="navbar-nav ml-n2">
+                  <li class="nav-item border-right border-secondary">
+                    <a class="nav-link text-body small" href="#"
+                      id="nowDate">
+                    </a>
+                  </li>
+                  <li class="nav-item border-right border-secondary">
+                    <a class="nav-link text-body small" href="#">Advertise</a>
+                  </li>
+                  <li class="nav-item border-right border-secondary">
+                    <a class="nav-link text-body small" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body small" href="#">Login</a>
+                  </li>
+                </ul>
+                <span id="time" style="color:#fff;position:relative;left:20vw;"></span>
+              </nav>
+            </div>
+            <div class="col-lg-3 text-right d-none d-md-block">
+              <nav class="navbar navbar-expand-sm bg-dark p-0">
+                <ul class="navbar-nav ml-auto mr-n2">
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-twitter"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-facebook-f"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-linkedin-in"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-instagram"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-google-plus-g"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-youtube"></small
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+              <a href="/index.html" class="navbar-brand p-0 d-none d-lg-block">
+                <h1 class="m-0 display-4 text-uppercase text-primary">
+                  NAD<span class="text-secondary font-weight-normal">Soft</span>
+                </h1>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Topbar End -->
+    
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0">
+          <nav
+            class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5"
+          >
+            <a href="/index.html" class="navbar-brand d-block d-lg-none">
+              <h1 class="m-0 display-4 text-uppercase text-primary">
+                Nad<span class="text-white font-weight-normal">Soft</span>
+              </h1>
+            </a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between px-0 px-lg-3"
+              id="navbarCollapse"
+            >
+              <div class="navbar-nav mr-auto py-0">
+                <a href="/index.html" class="nav-item nav-link active">Home</a>
+                <a href="/category.html" class="nav-item nav-link">Category</a>
+                <a href="/single.html" class="nav-item nav-link">Single News</a>
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    >Catagory</a
+                    >
+                    <div class="dropdown-menu rounded-0 m-0">
+                      <a href="#" class="dropdown-item">Cyber Security</a>
+                      <a href="#" class="dropdown-item">programming</a>
+                      <a href="#" class="dropdown-item">Artifial Intelligence</a>
+                    </div>
+                </div>
+                <a href="/contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+              <div
+                class="input-group ml-auto d-none d-lg-flex"
+                style="width: 100%; max-width: 300px"
+              >
+                <input
+                  type="text"
+                  class="form-control border-0"
+                  placeholder="Keyword"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="input-group-text bg-primary text-dark border-0 px-3"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Navbar End -->
+    
+<br><br>
+<!--head-title img-by content para-start -->
+
+<h1 id="head-title">Responsive Web Design with CSS Media Queries</h1>
+<img 
+src="https://img.freepik.com/premium-vector/isometric-developing-programming-coding-technologies-young-programmer-coding-new-project-using-computer-man-sitting-big-laptop-working_589019-2494.jpg?w=826" 
+alt=""
+loading="lazy"
+>
+<p class="img-by">freepik</p>
+<div class="content">
+
+  In today's digital landscape, users access websites and web applications across a wide range of devices and screen sizes, from desktop computers to smartphones and tablets. To provide an optimal user experience, it's crucial to implement responsive web design. CSS Media Queries are a fundamental tool for achieving this goal. In this article, we'll explore the concept of responsive web design and delve into CSS Media Queries to create websites that adapt seamlessly to different screen sizes.
+  
+  <h2> What is Responsive Web Design?</h2>
+  
+  Responsive web design is an approach to web development that ensures a website's layout and content adjust fluidly based on the user's device and screen size. It aims to deliver a consistent and user-friendly experience, regardless of whether the visitor is using a large desktop monitor or a small smartphone screen.
+  
+  <h2> The Role of CSS Media Queries</h2>
+  
+  CSS Media Queries are conditional statements that allow you to apply different styles to a webpage based on specific characteristics of the user's device, such as screen width, height, orientation, or resolution. By using Media Queries, you can create responsive layouts and styles that adapt to various viewing contexts.
+  
+  <h2> Creating Responsive Layouts with Media Queries</h2>
+  
+  Let's walk through a simple example of using Media Queries to create a responsive layout. Suppose you have a two-column layout on your website that you want to adjust for smaller screens:
+  
+  <pre>
+    <code>
+      <span class="code-css-symbol">/* Default styles for larger screens */</span>
+      <span class="code-css-selector">.column</span><span class="code-css-symbol">{</span>
+        <span class="code-css-property">width</span><span class="code-css-symbol">:</span><span class="code-css-value"> 50%</span><span class="code-css-symbol">;</span>
+        <span class="code-css-property">float</span><span class="code-css-symbol">:</span><span class="code-css-value"> left</span><span class="code-css-symbol">;
+      }
+      
+      /* Media Query for screens with a maximum width of 600px */</span>
+      <span class="code-css-keyword">@media</span><span class="code-css-symbol"> (</span><span class="code-css-property">max-width</span><span class="code-css-symbol">:</span><span class="code-css-value"> 600px</span><span class="code-css-symbol">) {</span>
+        <span class="code-css-selector">.column</span><span class="code-css-symbol"> {</span>
+          <span class="code-css-property">width</span><span class="code-css-symbol">:</span><span class="code-css-value"> 100%</span><span class="code-css-symbol">;</span>
+          <span class="code-css-property">float</span><span class="code-css-symbol">:</span><span><span class="code-css-value"> none</span><span class="code-css-symbol">;
+        }
+      }</span>
+    </code>
+  </pre>
+  
+  In this example, the CSS styles specify that the `.column` elements should take up 50% of the width and float next to each other on larger screens. However, when the screen width is 600 pixels or less (e.g., for mobile devices), the Media Query takes effect, and the columns expand to 100% width, stacking vertically for a better mobile user experience.
+  
+  <h2> Testing and Debugging Media Queries</h2>
+  
+  To ensure that your Media Queries work as intended, it's essential to test your website on various devices and screen sizes. Most modern web browsers come with built-in developer tools that allow you to simulate different screen dimensions and orientations.
+  
+  <h2> Additional Tips for Responsive Web Design</h2>
+  
+   <h4>1. Mobile-First Approach:</h4> Start your design with mobile devices in mind, then progressively enhance it for larger screens. This approach ensures a more efficient and user-friendly experience.
+  
+   <h4>2. Use Relative Units:</h4> Instead of fixed pixel values, use relative units like percentages, ems, or rems for widths and font sizes to allow elements to scale appropriately.
+  
+   <h4>3. Images and Media:</h4> Optimize images for different screen resolutions using <mark><code>srcset</code></mark> and <mark><code>picture</code></mark> elements to deliver the right image size to each device.
+  
+   <h4>4. Content Prioritization:</h4> Consider what content is essential for smaller screens and prioritize it. Use CSS to hide or rearrange less critical content for mobile users.
+  
+  <h2> Conclusion</h2>
+  
+  CSS Media Queries are a fundamental tool for creating responsive web designs that adapt to various devices and screen sizes. By incorporating Media Queries into your web development workflow, you can provide a seamless user experience across all platforms, ensuring that your website looks and functions beautifully on every screen. Responsive web design is essential for reaching a broader audience and improving user engagement in an increasingly mobile-centric world.
+
+</div>
+
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+    <div class="row py-4">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Get In Touch
+        </h5>
+        <p class="font-weight-medium">
+          <i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA
+        </p>
+        <p class="font-weight-medium">
+          <i class="fa fa-phone-alt mr-2"></i>+012 345 67890
+        </p>
+        <p class="font-weight-medium">
+          <i class="fa fa-envelope mr-2"></i>info@example.com
+        </p>
+        <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">
+          Follow Us
+        </h6>
+        <div class="d-flex justify-content-start">
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square" href="#"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Popular News
+        </h5>
+        <div class="mb-3">
+          <div class="mb-2">
+            <a
+              class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+              href=""
+              >Business</a
+            >
+            <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+          </div>
+          <a class="small text-body text-uppercase font-weight-medium" href=""
+            >THE BEST FPS GAMES ON ANDROID IN 2023: POPULAR BY DEMAND...</a
+          >
+        </div>
+        <div class="mb-3">
+          <div class="mb-2">
+            <a
+              class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+              href=""
+              >Business</a
+            >
+            <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+          </div>
+          <a class="small text-body text-uppercase font-weight-medium" href=""
+            >PROTONMAIL CODE VULNERABILITIES LEAKED EMAILS...</a
+          >
+        </div>
+        <div class="">
+          <div class="mb-2">
+            <a
+              class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+              href=""
+              >Business</a
+            >
+            <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+          </div>
+          <a class="small text-body text-uppercase font-weight-medium" href=""
+            >TIKTOK OPENS DUBLIN DATA CENTRE TO EASE CHINA SPYING FEARS</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Categories
+        </h5>
+        <div class="m-n1">
+          <a href="" class="btn btn-sm btn-secondary m-1">Cyber</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Hacking</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Tech</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Gaming</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">AI</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">API</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Python</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Programming</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Mobile Phone</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Malware</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Newsletter
+        </h5>
+        <form action="">
+            <input type="email" name="email">
+            <input type="submit" value="Submit">
+        </form><br><br>
+        <p>Subscribe to our Newsletter to notify our latest news and articles and stay touch!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div
+        class="container-fluid py-4 px-sm-3 px-md-5"
+        style="background: #111111"
+    >
+        <p class="m-0 text-center">
+        &copy; <a href="#">nad-soft</a>. All Rights Reserved.
+
+        Design by <a href="https://htmlcodex.com">@slnadyc</a>
+        </p>
+    </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-square back-to-top"
+    ><i class="fa fa-arrow-up"></i
+  ></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="/lib/easing/easing.min.js"></script>
+  <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/js/date.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Improve Website with AI</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="theme-color" content="#e83e8c">
+        <meta content="blog,hacking news,nad-soft,nad soft" name="keywords" />
+        <meta content="We talk about latest hacking news and technologies." name="description" />
+    
+        <!-- Favicon -->
+        <link href="/img/logo.png" rel="icon" />
+    
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+    
+        <!-- Font Awesome -->
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+          rel="stylesheet"
+        />
+    
+        <!-- Libraries Stylesheet -->
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="/css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/database/css/blog.css">
+      </head>
+    
+      <body>
+        <!-- Topbar Start -->
+        <div class="container-fluid d-none d-lg-block">
+          <div class="row align-items-center bg-dark px-lg-5">
+            <div class="col-lg-9">
+              <nav class="navbar navbar-expand-sm bg-dark p-0">
+                <ul class="navbar-nav ml-n2">
+                  <li class="nav-item border-right border-secondary">
+                    <a class="nav-link text-body small" href="#"
+                      id="nowDate">
+                    </a>
+                  </li>
+                  <li class="nav-item border-right border-secondary">
+                    <a class="nav-link text-body small" href="#">Advertise</a>
+                  </li>
+                  <li class="nav-item border-right border-secondary">
+                    <a class="nav-link text-body small" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body small" href="#">Login</a>
+                  </li>
+                </ul>
+                <span id="time" style="color:#fff;position:relative;left:20vw;"></span>
+              </nav>
+            </div>
+            <div class="col-lg-3 text-right d-none d-md-block">
+              <nav class="navbar navbar-expand-sm bg-dark p-0">
+                <ul class="navbar-nav ml-auto mr-n2">
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-twitter"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-facebook-f"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-linkedin-in"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-instagram"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-google-plus-g"></small
+                    ></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-body" href="#"
+                      ><small class="fab fa-youtube"></small
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row align-items-center bg-white py-3 px-lg-5">
+            <div class="col-lg-4">
+              <a href="/index.html" class="navbar-brand p-0 d-none d-lg-block">
+                <h1 class="m-0 display-4 text-uppercase text-primary">
+                  NAD<span class="text-secondary font-weight-normal">Soft</span>
+                </h1>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Topbar End -->
+    
+        <!-- Navbar Start -->
+        <div class="container-fluid p-0">
+          <nav
+            class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5"
+          >
+            <a href="/index.html" class="navbar-brand d-block d-lg-none">
+              <h1 class="m-0 display-4 text-uppercase text-primary">
+                Nad<span class="text-white font-weight-normal">Soft</span>
+              </h1>
+            </a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between px-0 px-lg-3"
+              id="navbarCollapse"
+            >
+              <div class="navbar-nav mr-auto py-0">
+                <a href="/index.html" class="nav-item nav-link active">Home</a>
+                <a href="/category.html" class="nav-item nav-link">Category</a>
+                <a href="/single.html" class="nav-item nav-link">Single News</a>
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    >Catagory</a
+                    >
+                    <div class="dropdown-menu rounded-0 m-0">
+                      <a href="#" class="dropdown-item">Cyber Security</a>
+                      <a href="#" class="dropdown-item">programming</a>
+                      <a href="#" class="dropdown-item">Artifial Intelligence</a>
+                    </div>
+                </div>
+                <a href="/contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+              <div
+                class="input-group ml-auto d-none d-lg-flex"
+                style="width: 100%; max-width: 300px"
+              >
+                <input
+                  type="text"
+                  class="form-control border-0"
+                  placeholder="Keyword"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="input-group-text bg-primary text-dark border-0 px-3"
+                  >
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- Navbar End -->
+    
+<br><br>
+<!--head-title img-by content para-start -->
+
+<div class="content">
+    <h1 id="head-title">Blog Post Submission Guidelines</h1>
+
+    <p>Thank you for your interest in contributing to our blog! We appreciate your desire to share your thoughts and expertise with our audience. To ensure a smooth and organized submission process, please follow these guidelines when sending your blog article via email to <strong><a href="mailto:nadsoftlk@proton.me">nadsoftlk@proton.me</a></strong>.</p>
+
+    <h2>Submission Requirements:</h2>
+
+    <h3>1. Author Information</h3>
+
+    <p>In your email, please provide the following author information:</p>
+    <ul>
+        <li>Full Name: [John Doe]</li>
+        <li>Email Address: [johndoe@mail.com]</li>
+        <li>About You: [Share my knowledge with others]</li>
+    </ul>
+
+    <p>You may also include a profile picture of yourself if you wish. This image should be attached to the email in a standard image format (JPEG, PNG, etc.) and should be appropriately sized for display on our blog.</p>
+
+    <h3>2. Blog Article File</h3>
+
+    <p>Attach your blog article as a separate file to the email. The acceptable file formats for your blog article are:</p>
+    <ul>
+        <li>Microsoft Word (.doc or .docx)</li>
+        <li>Plain Text (.txt)</li>
+    </ul>
+
+    <p>Please ensure that your article adheres to the following guidelines:</p>
+
+    <h4>Article Format:</h4>
+    <ul>
+        <li>Use a clear and concise title at the beginning of your document.</li>
+        <li>Organize your article into sections or headings for better readability.</li>
+        <li>Use legible fonts and maintain a consistent font size throughout the document.</li>
+        <li>Include any relevant images within the document or provide separate image files if needed. Make sure to reference the image placements within the text.</li>
+        <li>Use hyperlinks when referencing external sources or websites.</li>
+        <li>Ensure proper grammar, spelling, and punctuation.</li>
+    </ul>
+
+    <h4>Article Content:</h4>
+    <ul>
+        <li>Content must be original and not published elsewhere.</li>
+        <li>Articles should be informative, engaging, and relevant to our blog's themes and target audience.</li>
+        <li>Avoid promotional or self-promotional content.</li>
+        <li>Respect copyright and give proper credit for any external content used.</li>
+    </ul>
+
+    <h4>Article Length:</h4>
+    <p>Aim for a word count of <strong>800-1500 words</strong>. Longer articles may be accepted if the content warrants it.</p>
+
+    <h3>3. Submission Email Subject</h3>
+
+    <p>In the subject line of your email, please use the following format: "Blog Submission - [Your Full Name]". This helps us quickly identify your submission.</p>
+
+    <h2>Submission Process:</h2>
+
+    <ol>
+        <li>Compose an email to <strong>nadsoftlk@proton.me</strong> with the required author information and attached blog article.</li>
+        <li>Review your email to ensure that all necessary information is included.</li>
+        <li>Send the email. Once we receive your submission, our editorial team will review it. If your article is accepted for publication, we will contact you to discuss the publication date and any potential edits.</li>
+    </ol>
+
+    <p>Thank you for considering contributing to our blog. We look forward to receiving your valuable insights and sharing them with our audience. If you have any questions or need further assistance, please don't hesitate to contact us via the same email address.</p>
+</div>
+
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
+    <div class="row py-4">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Get In Touch
+        </h5>
+        <p class="font-weight-medium">
+          <i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA
+        </p>
+        <p class="font-weight-medium">
+          <i class="fa fa-phone-alt mr-2"></i>+012 345 67890
+        </p>
+        <p class="font-weight-medium">
+          <i class="fa fa-envelope mr-2"></i>info@example.com
+        </p>
+        <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">
+          Follow Us
+        </h6>
+        <div class="d-flex justify-content-start">
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a class="btn btn-lg btn-secondary btn-lg-square" href="#"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Popular News
+        </h5>
+        <div class="mb-3">
+          <div class="mb-2">
+            <a
+              class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+              href=""
+              >Business</a
+            >
+            <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+          </div>
+          <a class="small text-body text-uppercase font-weight-medium" href=""
+            >PROTONMAIL CODE VULNERABILITIES LEAKED EMAILS...</a
+          >
+        </div>
+        <div class="mb-3">
+          <div class="mb-2">
+            <a
+              class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+              href=""
+              >Business</a
+            >
+            <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+          </div>
+          <a class="small text-body text-uppercase font-weight-medium" href=""
+            >THE BEST FPS GAMES ON ANDROID IN 2023: POPULAR BY DEMAND...</a
+          >
+        </div>
+        <div class="">
+          <div class="mb-2">
+            <a
+              class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+              href=""
+              >Business</a
+            >
+            <a class="text-body" href=""><small>Sep 02, 2023</small></a>
+          </div>
+          <a class="small text-body text-uppercase font-weight-medium" href=""
+            >TIKTOK OPENS DUBLIN DATA CENTRE TO EASE CHINA SPYING FEARS</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Categories
+        </h5>
+        <div class="m-n1">
+          <a href="" class="btn btn-sm btn-secondary m-1">Cyber</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Business</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Hacking</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Tech</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Gaming</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">AI</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">API</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Python</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Programming</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Mobile Phone</a>
+          <a href="" class="btn btn-sm btn-secondary m-1">Malware</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h5 class="mb-4 text-white text-uppercase font-weight-bold">
+          Newsletter
+        </h5>
+        <form action="">
+            <input type="email" name="email">
+            <input type="submit" value="Submit">
+        </form><br><br>
+        <p>Subscribe to our Newsletter to notify our latest news and articles and stay touch!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div
+        class="container-fluid py-4 px-sm-3 px-md-5"
+        style="background: #111111"
+    >
+        <p class="m-0 text-center">
+        &copy; <a href="#">nad-soft</a>. All Rights Reserved.
+
+        Design by <a href="https://htmlcodex.com">@slnadyc</a>
+        </p>
+    </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary btn-square back-to-top"
+    ><i class="fa fa-arrow-up"></i
+  ></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="/lib/easing/easing.min.js"></script>
+  <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/js/date.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
