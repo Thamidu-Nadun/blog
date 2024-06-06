@@ -1,0 +1,23 @@
+name: Upload to 000webhost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install FTP client
+        run: sudo apt-get install -y lftp
+
+      - name: Upload files to 000webhost
+        run: |
+          lftp -e "set ftp:ssl-allow no; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} files.000webhost.com; mirror -R ./path/to/local/files /remote/directory; bye"
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
